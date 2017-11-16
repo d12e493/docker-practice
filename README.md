@@ -3,10 +3,10 @@
 ## init setting
 
 * make docker image
-
+<pre>
   cd main
   docker build --rm -t web .
-  
+  </pre>
 * check docker image list
 
   docker images
