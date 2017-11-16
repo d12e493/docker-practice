@@ -14,3 +14,10 @@ webapp4:
   image: web
   ports:
     - "3034:8080"
+nginx:
+  image: nginx
+  ports:
+    - 5000:8888
+  volumes:
+    - ./nginx/conf:/etc/nginx/conf.d
+    - ./nginx/www:/var/www
