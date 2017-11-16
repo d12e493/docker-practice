@@ -1,0 +1,16 @@
+webapp1:
+  image: web
+  ports:
+    - "3031:8080"
+webapp2:
+  image: web
+  ports:
+    - "3032:8080"
+webapp3:
+  image: web
+  ports:
+    - "3033:8080"
+webapp4:
+  image: web
+  ports:
+    - "3034:8080"
