@@ -21,3 +21,13 @@ nginx:
   volumes:
     - ./nginx/conf:/etc/nginx/conf.d
     - ./nginx/www:/var/www
+mysql:
+  image: mysql
+  environment:
+   - MYSQL_ROOT_PASSWORD=password
+   - MYSQL_DATABASE=bignibou
+  volumes:
+   - ./mysql/db:/var/lib/mysql
+  ports:
+    - "3306:3306"
+
