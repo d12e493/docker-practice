@@ -4,7 +4,6 @@
 
 * make docker image
 <pre>
-  cd main
   docker build --rm -t web .
 </pre>
 * check docker image list
@@ -27,8 +26,13 @@
 
 * run 4 application port 3031 - 3034
 * 1 nginx port 5000
+* mysql port 3306
 <pre>
   docker-compose up -d
+</pre>
+* try rest function
+<pre>
+  localhost:3031/productList
 </pre>
 * stop compose
 <pre>
