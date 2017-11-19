@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"database/sql"
 	"encoding/json"
-	_ "test/go-sql-driver/mysql"
+	_ "go-sql-driver/mysql"
 )
 
 type Product struct {

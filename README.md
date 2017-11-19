@@ -26,7 +26,7 @@
 
 * run 4 application port 3031 - 3034
 * 1 nginx port 5000
-* mysql port 3306
+* mysql port 5566
 <pre>
   docker-compose up -d
 </pre>

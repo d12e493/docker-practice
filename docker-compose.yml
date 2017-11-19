@@ -37,4 +37,4 @@ mysql:
   volumes:
    - ./mysql/db:/var/lib/mysql
   ports:
-    - "3306:3306"
+    - "5566:3306"
