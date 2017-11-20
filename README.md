@@ -25,14 +25,15 @@
 ## use docker-compose
 
 * run 4 application port 3031 - 3034
-* 1 nginx port 5000
+* 1 nginx port 18888 welcome page
+          port 19000 go application
 * mysql port 5566
 <pre>
   docker-compose up -d
 </pre>
 * try rest function
 <pre>
-  localhost:3031/productList
+  localhost:19000/productList
 </pre>
 * stop compose
 <pre>
