@@ -1,34 +1,40 @@
 webapp1:
   image: web
-  ports:
-    - "3031:8080"
+  expose:
+      - "8080"
   links:
     - "mysql"
 webapp2:
   image: web
-  ports:
-    - "3032:8080"
+  expose:
+      - "8080"
   links:
     - "mysql"
 webapp3:
   image: web
-  ports:
-    - "3033:8080"
+  expose:
+      - "8080"
   links:
     - "mysql"
 webapp4:
   image: web
-  ports:
-    - "3034:8080"
+  expose:
+      - "8080"
   links:
     - "mysql"
 nginx:
   image: nginx
   ports:
-    - 5000:8888
+    - 19000:9000
+    - 18888:8888
   volumes:
-    - ./nginx/conf:/etc/nginx/conf.d
+    - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro
     - ./nginx/www:/var/www
+  links:
+    - webapp1
+    - webapp2
+    - webapp3
+    - webapp4
 mysql:
   image: mysql
   environment:
